@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.Scanner;
 public class VideoStoreApp {
     public static void main(String[] args) {
@@ -14,9 +15,13 @@ public class VideoStoreApp {
             
             //This will print to the console
             // it will read and print the text from the mycollectionsapp.md
-
+            try {
+                statement.readFromText();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
             if (userChoice == 2) {
-      System.out.println("Goodbye, have a nice day");
+                System.out.println("Goodbye, have a nice day");
             }
         }
         // asking the user for input
